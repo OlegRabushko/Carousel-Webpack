@@ -1,0 +1,73 @@
+@mixin btn {
+    width: 80px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.596);
+    color: white;
+    border-radius: 3px;
+}
+
+body{
+    margin: auto;
+}
+.slider__container{
+    width: 900px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    background-image: url(../images/img-5.jpg);
+    background-position: 50% 40%;
+    overflow: hidden;
+    border-radius: 10px;
+    .slider__track{
+        display: flex;
+        justify-content: space-between;
+        transition: 0.7s;
+        width: 900px;;
+        height: 300px;
+        touch-action: none;
+        font-size: 25px;
+        .slider__items{
+            height: 260px;
+            width: 200px;
+            background-color: transparent;
+            .slider__item{
+                height: 90%;;
+                margin: 5%;
+                padding-top: 40px;
+                background-color: transparent;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+}
+.slider__btns{
+    margin-top: 20px;
+    text-align: center;
+    outline: none;
+    border: none;
+    .slider__btn__prev{
+        @include btn;
+        margin-right: 20px;
+        &:hover{
+            background-color: rgb(177, 176, 176);
+            color:black;
+        }
+    } 
+    .slider__btn__next{
+        @include btn;
+        &:hover{
+            background-color: rgb(177, 176, 176);
+            color:black;
+        }
+    }
+}
+
+
+
+
+
